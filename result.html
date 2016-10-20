@@ -1,0 +1,56 @@
+<style>
+    .game-result .content {
+        padding: 50px 25px;
+    }
+
+    .incorrect {
+        overflow: auto;
+    }
+
+    .btn-large {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+        width: 350px;
+        background-color: #0580b9;
+        text-align: center;
+        padding: 20px 0;
+        display: inline-block;
+        float: left;
+        border-radius: 5px;
+    }
+
+    .btn-large:hover {
+        text-decoration: none;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+
+<div id="game-result" class="container module default game-result">
+    <div class="content">
+        <div class="floatLf" style="margin: 0 20px 100px 0;">
+            <img class="productIQ-logo" src="http://media.biocompare.com/m/37/article/product-challenge-logo.jpg" itemprop="image" />
+        </div>
+        <div id="result-pass" class="hidden">
+            <h3>Congratulations!</h3>
+            <p>You are a Product IQ champion, you got <b>8/8</b> correct!<br /> If you are one of the first 50 that have completed the game board correctly you will recived your Starbucks gift card via email. Thank you for playing our game.</p>
+        </div>
+        <div id="result-fail" class="hidden">
+            <h3>You're so close to being a winner!</h3>
+            <p>You got <b><span id="score">0</span>/8</b> correct. Keep trying! Need some help? <br />Click on the products below for more information that can help you win.</p>
+            <a href="/Biocompare-Featured-Products/"><img src="http://media.biocompare.com/m/37/article/incorrect-products.jpg" itemprop="image" /></a>
+            <a href="/Product-IQ-Challenge/" class="btn-large">Return to Game Board</a>
+        </div>
+    </div>
+</div>
+
+<div id="cookie-alert" class="hidden">Please enable cookies to play this game</div>
+
+<script type="text/javascript">
+    $(function() {
+        $('.ContentSharing').insertAfter('img.productIQ-logo');
+    });
+</script>

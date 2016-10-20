@@ -1,0 +1,43 @@
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+<script type="text/javascript">
+    (function() {
+
+        function readCookie(name) {
+            var nameEQ = name + '=';
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return null;
+        }
+
+        function createResult(score) {
+          var result = score.toString() === '8' ? 'pass' : 'fail';
+          // console.log(score, result);
+          $('#result-' + result).show();
+          $('#score').html(score);
+        }
+
+        function init () {
+            if (readCookie('biocompare-challenge')) {
+                $('#cookie-alert').hide();
+                $('#game-result').show();
+            }
+            else {
+                $('#cookie-alert').show();
+                $('#game-result').hide();
+            }
+        }
+
+        init();
+        createResult( readCookie('biocompare-challenge') );
+
+    })();
+</script>
