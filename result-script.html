@@ -1,7 +1,11 @@
+<script type="text/javascript">
+    $.noConflict(true); // <-- true removes the reference to jQuery aswell.
+</script>
+
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
 <script type="text/javascript">
-    (function() {
+    (function () {
 
         function readCookie(name) {
             var nameEQ = name + '=';
@@ -19,13 +23,13 @@
         }
 
         function createResult(score) {
-          var result = score.toString() === '8' ? 'pass' : 'fail';
-          // console.log(score, result);
-          $('#result-' + result).show();
-          $('#score').html(score);
+            var result = score.toString() === '8' ? 'pass' : 'fail';
+            // console.log(score, result);
+            $('#result-' + result).show();
+            $('#score').html(score);
         }
 
-        function init () {
+        function init() {
             if (readCookie('biocompare-challenge')) {
                 $('#cookie-alert').hide();
                 $('#game-result').show();
@@ -37,7 +41,15 @@
         }
 
         init();
-        createResult( readCookie('biocompare-challenge') );
+        createResult(readCookie('biocompare-challenge'));
 
     })();
+</script>
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.ContentSharing').insertAfter('img.productIQ-logo');
+    });
 </script>
