@@ -11,7 +11,7 @@
         margin-bottom: 20px;
     }
 
-    .formHolder h1,
+    .articleBody .formHolder h1,
     .country.dropdownList {
         display: none;
     }
@@ -25,14 +25,25 @@
         text-align: center;
     }
 
-    .formHolder input.button.btn-large {
+    .formHolder input.button.btn-large, .btn-large {
         width: 350px;
         background: #0580b9 !important;
         border: none !important;
         color: #fff !important;
         box-shadow: none !important;
     }
-
+    .clear-game{
+            background-color: #f26522 !important;
+        display: block;
+        padding: 8px 0;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 15px;
+        cursor: pointer;
+        text-align: CENTER;
+    }
     .container.game {
         font-size: 14px;
         line-height: 1.8em;
@@ -126,6 +137,40 @@
     .hidden {
         display: none;
     }
+    .formHolder p.error {
+      margin: 0;
+    }
+    .contenttShareViaEmail li {
+      margin: 0 2px;
+      font-size: 11px;
+      display: inline-block;
+      zoom: 1;
+      line-height: 16px;
+      background-image: url(/Media/37/Images/Icons.gif);
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+    .contenttShareViaEmail{
+      margin-top: -5px;
+    }
+    .contenttShareViaEmail li {
+      padding: 0 0 0 20px;
+      background-position: 0 -64px;
+    }
+    .ContentSharing span {
+        margin: 0 10px 0 0;
+        float: left;
+    }
+    .errorMessage{
+      display: block;
+      color: #DF0000;
+      font-size: 125%;
+      padding: 20px;
+      background: #fff !important;
+      border: 1px solid #DF0000 !important;
+    }
+    .drop-products .header{
+         position:relative;}
 </style>
 
 <!-- The Game -->
@@ -143,9 +188,7 @@
             </div>
             <!-- CORRECT -->
             <div class="" style="display: inline-block;">
-                <h3>
-                  Biocompare invites you to test your produt knowledge.<br />
-                  It's easy! Just follow these steps to practice:</h3>
+                <h3>Just follow these steps to participate:</h3>
                 <ol style="margin-left: 20px;">
                     <li>Match up the companies with their products</li>
                     <li>Need some help? Click on the products for more information</li>
@@ -158,8 +201,8 @@
     <!-- Directions -->
     <div class="container module default game">
         <div class="content">
-            <b>Directions:</b> Drag the company logo over to the <span class="blue">Products</span> listed and drop onto the matching product.
-            <br /> Need help? All <span class="blue">products</span> included in the game can be found <a href="/Biocompare-Featured-Products/">
+            <b>Directions:</b> Drag the company logo over to the <a href="/Biocompare-Featured-Products/" target="_blank" ><span class="blue">Products</span></a> listed and drop onto the matching product.
+            <br /> Need help? All <a target="_blank" href="/Biocompare-Featured-Products/"><span class="blue">products</span></a> included in the game can be found <a target="_blank" href="/Biocompare-Featured-Products/">
                 here</a>. Good luck!
 
         </div>
@@ -168,96 +211,97 @@
     <!-- Drag Vendors -->
     <div class="vendors-drag">
         <h2>Company Logos</h2>
-        <!-- Bio Molecular Systems -->
+        <!-- Thermo Fisher Scientific -->
         <div id="vendor1" class="vendor-img draggable">
-            <img class="Bio-Molecular-Systems" alt="Bio Molecular Systems" src="http://media.biocompare.com/m/37/vendor/106265-134x100.jpg" itemprop="image" />
+            <img class="Bio-Molecular-Systems" alt="Thermo Fisher Scientific" src="http://media.biocompare.com/m/37/vendor/104463-134x100.jpg" itemprop="image" />
         </div>
-        <!-- R&D Systems -->
+        <!-- Thermo Fisher Scientific -->
         <div id="vendor2" class="vendor-img draggable">
-            <img class="RD" alt="R&D Systems" src="http://media.biocompare.com/m/37/vendor/100364-134x100.jpg" itemprop="image" />
-        </div>
-        <!-- ProteinSimple -->
+            <img class="Bio-Molecular-Systems" alt="Thermo Fisher Scientific" src="http://media.biocompare.com/m/37/vendor/104463-134x100.jpg" itemprop="image" />
+       </div>
+        <!-- Denovix -->
         <div id="vendor3" class="vendor-img draggable">
-            <img class="ProteinSimple" alt="ProteinSimple" src="http://media.biocompare.com/m/37/vendor/104337-134x100.jpg" itemprop="image" />
+            <img class="ProteinSimple" alt="Denovix" src="http://media.biocompare.com/m/37/vendor/105815-134x100.jpg" itemprop="image" />
         </div>
-        <!-- Bio-Rad -->
+        <!-- Corning -->
         <div id="vendor4" class="vendor-img draggable">
-            <img class="Bio-Rad" alt="Bio-Rad" src="http://media.biocompare.com/m/37/vendor/100041-134x100.jpg" itemprop="image" />
+            <img class="Bio-Rad" alt="Corning Life Sciences" height="80px" src="http://media.biocompare.com/m/37/vendor/100341-134x100.jpg" itemprop="image" />
         </div>
-        <!-- GE -->
+        <!-- BUHLMANN Diagnostics Corp -->
         <div id="vendor5" class="vendor-img draggable">
-            <img class="GE" alt="GE Healthcare Life Sciences " src="http://media.biocompare.com/m/37/vendor/100022-134x100.jpg" itemprop="image" />
+            <img class="GE" alt="BUHLMANN Diagnostics Corp" src="http://media.biocompare.com/m/37/vendor/106242-134x100.jpg" itemprop="image" />
         </div>
-        <!-- Roche -->
+        <!-- NuAire -->
         <div id="vendor6" class="vendor-img draggable">
-            <img class="Roche" alt="Roche" src="http://media.biocompare.com/m/37/vendor/100147-134x100.jpg" itemprop="image" />
+            <img class="Roche" alt="NuAire" src="http://media.biocompare.com/m/37/vendor/100390-134x100.jpg" itemprop="image" />
         </div>
-        <!-- INNOPSYS -->
+        <!-- EMD Millipore -->
         <div id="vendor7" class="vendor-img draggable">
-            <img class="INNOPSYS" alt="INNOPSYS" src="http://media.biocompare.com/m/37/vendor/102761-134x100.jpg" itemprop="image" />
+            <img class="INNOPSYS" alt="EMD Millipore" src="http://media.biocompare.com/m/37/vendor/100205-134x100.jpg" itemprop="image" />
         </div>
-        <!-- ChemoMetec -->
+        <!-- Sysmex America -->
         <div id="vendor8" class="vendor-img draggable last">
-            <img class="ChemoMetec" alt="ChemoMetec" src="http://media.biocompare.com/m/37/vendor/105161-134x100.jpg" itemprop="image" />
+            <img class="ChemoMetec" alt="Sysmex America" src="http://media.biocompare.com/m/37/vendor/106270-134x100.jpg" itemprop="image" />
         </div>
     </div>
 
     <!-- Drop Products -->
     <div class="drop-products">
-        <h2 class="blue">
+        <div class="header"><h2 class="blue">
             Products</h2>
-        <!-- Bio Molecular Systems -->
+            <span class="btn-large clear-game">Clear Gameboard</span></div>
+        <!-- Sysmex America -->
         <div class="product-box">
-            <a href="/23398-PCR-Machines/10374350-Mic-Magnetic-Induction-Cycler-Instrument/" target="_blank" title="Mic qPCR Cycler">Mic qPCR Cycler</a>
+            <a href="/10967-Cell-Analysis-Systems/10577413-Sysmex-XN-1000-Hematology-Analyzer/" target="_blank" title="XN-1000&#8482; Hematology Analyzer">XN-1000&#8482; Hematology Analyzer</a>
             <div class="droppable" id="product1">
                 <span>Drag
                 Here</span></div>
         </div>
-        <!-- Roche -->
+        <!-- Thermo Fisher Scientific -->
         <div class="product-box">
-            <a href="/22642-Sequencing-Reagent-Kits/6024086-SeqCap-RNA-System/" target="_blank" title="SeqCap RNA System">SeqCap RNA System</a>
-            <div class="droppable" id="product5">
-                <span>Drag
-                Here</span></div>
-        </div>
-        <!-- R&D Systems -->
-        <div class="product-box">
-            <a href="/25138-Assay-Kit/10374288-Proteome-Profiler-Human-XL-Cytokine-Array-Kit/" target="_blank" title="Proteome Profiler Human XL Cytokine Array Kit">Proteome Profiler Human XL Cytokine Array Kit</a>
+            <a href="/10204-Biomolecules/10572502-Platinum-SuperFi-DNA-Polymerase/" target="_blank" title="Platinum&#8482; SuperFi&#8482; DNA Polymerase">Platinum&#8482; SuperFi&#8482; DNA Polymerase</a>
             <div class="droppable" id="product2">
                 <span>Drag
                 Here</span></div>
         </div>
-        <!-- ProteinSimple -->
+        <!-- BUHLMANN Diagnostics Corp -->
         <div class="product-box">
-            <a href="/9976-Automated-Diagnostic-Instruments/6427576-Ella/" target="_blank" title="Ella Simple Plex System">Ella Simple Plex System</a>
-            <div class="droppable" id="product6">
-                <span>Drag
-                Here</span></div>
-        </div>
-        <!-- Bio-Rad -->
-        <div class="product-box">
-            <a href="/11253-Chromatography-Software/10307093-ChromLab-Software/" target="_blank" title="ChromLab &#8482; Software">ChromLab &#8482; Software</a>
+            <a href="/25138-Assay-Kit/10609256-Flow-CAST-Kinase-Inhibition-Assay/" target="_blank" title="Flow CAST&#174; Kinase Inhibition Assay">Flow CAST&#174; Kinase Inhibition Assay</a>
             <div class="droppable" id="product3">
                 <span>Drag
                 Here</span></div>
         </div>
-        <!-- GE -->
+        <!-- Corning -->
         <div class="product-box">
-            <a href="/23222-Surface-Plasmon-Resonance-Systems-SPR-System/10132172-Biacore-8K-SPR-System/" target="_blank" title="Biacore &#8482; 8K SPR System">Biacore &#8482; 8K SPR System</a>
-            <div class="droppable" id="product7">
-                <span>Drag
-                Here</span></div>
-        </div>
-        <!-- INNOPSYS -->
-        <div class="product-box">
-            <a href="/20088-Microarray-Scanners-Microarray-Scanner-Systems/10394245-InnoScan-1100-AL-Microarray-Scanner/" target="_blank" title="InnoScan 1100 AL Microarray Scanner">InnoScan 1100 AL Microarray Scanner</a>
+            <a href="/12551-Digital-Gel-Imaging-Systems-CCD-Gel-Documentation/10572549-Axygen-Gel-Documentation-Systems/" target="_blank" title="Axygen&#174; Gel Documentation Systems">Axygen&#174; Gel Documentation Systems</a>
             <div class="droppable" id="product4">
                 <span>Drag
                 Here</span></div>
         </div>
-        <!-- ChemoMetec -->
+        <!-- Thermo Fisher Scientific -->
         <div class="product-box">
-            <a href="/10970-Cell-Counters-Viability-Analysis-Systems/4016301-NucleoCounter-NC-200/" target="_blank" title="NucleoCounter&#174; NC-200&#8482;">NucleoCounter&#174; NC-200&#8482;</a>
+            <a href="/10951-cDNA-Synthesis-Kits/10572561-SuperScript-IV-VILO-Master-Mix-with-ezDNase-Enzyme/" target="_blank" title="SuperScript&#8482; IV VILO&#8482; Master Mix with ezDNase&#8482; Enzyme">SuperScript&#8482; IV VILO&#8482; Master Mix with ezDNase&#8482; Enzyme</a>
+            <div class="droppable" id="product5">
+                <span>Drag
+                Here</span></div>
+        </div>
+        <!-- EMD Millipore -->
+        <div class="product-box">
+            <a href="/10293-Blotters-Vacuum/10577414-SNAP-i-d-2-0-Protein-Detection-System/" target="_blank" title="SNAP i.d.&#174; 2.0 Protein Detection System">SNAP i.d.&#174; 2.0 Protein Detection System</a>
+            <div class="droppable" id="product6">
+                <span>Drag
+                Here</span></div>
+        </div>
+        <!-- DeNovix -->
+        <div class="product-box">
+            <a href="/12412-Fluorometers-Fluorescence-Spectrophotometers/7357072-DS-11-FX-Series-Spectrophotometer-Fluorometer/" target="_blank" title="DS-11 FX Series Spectrophotometer/Fluorometer">DS-11 FX Series Spectrophotometer/Fluorometer</a>
+            <div class="droppable" id="product7">
+                <span>Drag
+                Here</span></div>
+        </div>
+        <!-- NuAire -->
+        <div class="product-box">
+            <a href="/11281-Class-II-Type-A2-Biological-Safety-Cabinet-Tissue-Culture-Hood-Biosafety-Cabinet/10609218-LabGard-ES-Energy-Saver-Class-II-Type-A2-Biological-Safety-Cabinets/" target="_blank" title="LabGard&#174; ES Class II, Type A2 Biological Safety Cabinet">LabGard&#174; ES Class II, Type A2 Biological Safety Cabinet</a>
             <div class="droppable" id="product8">
                 <span>Drag
                 Here</span></div>
@@ -267,10 +311,4 @@
 </div>
 
 <!-- Cookie Alert -->
-<div id="cookie-alert" class="hidden">Please enable cookies to play this game</div>
-
-<script type="text/javascript">
-    $(function() {
-        $('.ContentSharing').insertAfter('img.productIQ-logo');
-    });
-</script>
+<div id="cookie-alert" class="hidden errorMessage">Please enable cookies to play this game.</div>
