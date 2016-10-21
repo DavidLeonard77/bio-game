@@ -42,6 +42,8 @@
         position: absolute;
         top: 0;
         right: 0;
+        border-radius: 6px;
+        margin-right: 6px;
         font-size: 15px;
         cursor: pointer;
         text-align: CENTER;
@@ -85,7 +87,7 @@
         text-decoration: underline;
     }
 
-    div.product-container:nth-child(odd) {
+    div.product-container:nth-child(even) {
         margin-right: 0;
     }
 
@@ -161,6 +163,9 @@
       background-image: url('http://media.biocompare.com/m/37/vendor/106270-134x100.jpg');
     }
 
+    .vendors-drag {
+      margin-top: 50px;
+    }
     .vendors-drag img {
         border-radius: 8px;
         width: 103px;
@@ -169,6 +174,7 @@
     }
 
     .vendor-container {
+        background-color: white;
         display: inline-block;
         height: 80px;
         width: 103px;
@@ -176,7 +182,7 @@
     }
 
     .vendors-drag .vendor-container:last-child {
-        margin-right: 12px;
+        margin-right: 0;
     }
 
     .vendor-box {
@@ -229,6 +235,10 @@
         border: 1px solid #DF0000 !important;
     }
 
+
+    .drop-products {
+      margin-top: 10px;
+    }
     .drop-products .header {
         position: relative;
     }
@@ -331,6 +341,7 @@
 
     <!-- Drop Products -->
     <div class="drop-products">
+        <br>
         <div class="header">
             <h2 class="blue">Products</h2>
             <span class="btn-large clear-game">Clear Gameboard</span></div>
